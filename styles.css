@@ -1,0 +1,1063 @@
+/* ==========================================================================
+   Cozy Cup Cafe - Master Stylesheet
+   Theme: Warm Coffee & Cream Aesthetic
+   ========================================================================== */
+
+/* ==========================================================================
+   1. CSS Variables & Global Reset
+   - Color Palette: Warm Coffee Browns, Rich Espressos, Caramel, Cream Backgrounds
+   - Typography: Playfair Display (Serif Headings) & Outfit (Modern Body)
+   ========================================================================== */
+:root {
+    /* Color Palette - Warm Coffee & Cream */
+    --color-bg-cream: #FDFBF7;           /* Main soft cream background */
+    --color-bg-cream-alt: #F7F0E6;       /* Alternating section light cream */
+    --color-card-bg: #FFFFFF;            /* Pure white background for cards */
+    --color-nav-brown: #2C1810;          /* Deep rich espresso brown for navigation */
+    --color-coffee-dark: #3C2415;        /* Dark roasted coffee brown */
+    --color-coffee-medium: #6F4E37;      /* Warm medium coffee brown */
+    --color-caramel: #C87D48;            /* Warm caramel accent */
+    --color-caramel-hover: #B26B38;      /* Caramel hover state */
+    --color-gold: #D4A373;               /* Muted gold highlights */
+    --color-text-main: #2B1B17;          /* Dark mocha primary text */
+    --color-text-muted: #6E5A50;         /* Muted brown secondary text */
+    --color-border: #E8DCCF;             /* Subtle warm border */
+
+    /* Typography */
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Transitions & Shadows */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --shadow-soft: 0 10px 30px rgba(44, 24, 16, 0.06);
+    --shadow-hover: 0 15px 35px rgba(44, 24, 16, 0.12);
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+}
+
+/* Global Reset & Base Setup */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg-cream);
+    color: var(--color-text-main);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-sm);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+ul, ol {
+    list-style: none;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Container Utility - Flexbox Centering */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Section Header Utility */
+.section-header {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px auto;
+}
+
+.section-subtitle {
+    display: inline-block;
+    color: var(--color-caramel);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-coffee-dark);
+    margin-bottom: 12px;
+}
+
+.section-description {
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+}
+
+/* Button Component Styles - Flexbox Layout */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 28px;
+    font-weight: 600;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    border: 2px solid transparent;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: var(--color-caramel);
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-caramel-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(200, 125, 72, 0.35);
+}
+
+.btn-secondary {
+    background-color: var(--color-bg-cream-alt);
+    color: var(--color-coffee-dark);
+    border-color: var(--color-border);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-coffee-dark);
+    color: #FFFFFF;
+    border-color: var(--color-coffee-dark);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-caramel);
+    border-color: var(--color-caramel);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-caramel);
+    color: #FFFFFF;
+}
+
+
+/* ==========================================================================
+   2. Header & Navigation Section (Brown Navigation Bar)
+   - Layout: Flexbox space-between for brand, navigation menu, and action CTA
+   - Style: Deep espresso brown background with warm gold/white hover states
+   ========================================================================== */
+.site-header {
+    background-color: var(--color-nav-brown);
+    color: #FFFFFF;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 15px;
+}
+
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-gold);
+}
+
+.logo-icon {
+    font-size: 1.8rem;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-link {
+    color: #F3EAE1;
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-gold);
+    transition: width var(--transition-normal);
+}
+
+.nav-link:hover {
+    color: var(--color-gold);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.hamburger-bar {
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-gold);
+    border-radius: 2px;
+}
+
+
+/* ==========================================================================
+   3. Hero Section
+   - Layout: Flexbox row splitting text content and hero media
+   - Style: Soft warm background, prominent typography, and key highlights
+   ========================================================================== */
+.hero-section {
+    padding: 90px 0 70px 0;
+    background: linear-gradient(135deg, var(--color-bg-cream) 0%, var(--color-bg-cream-alt) 100%);
+    overflow: hidden;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    flex: 1 1 550px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background-color: rgba(200, 125, 72, 0.12);
+    color: var(--color-caramel);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 3.2rem;
+    line-height: 1.2;
+    color: var(--color-coffee-dark);
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 1.15rem;
+    color: var(--color-text-muted);
+    margin-bottom: 30px;
+    max-width: 520px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 45px;
+}
+
+.hero-highlights {
+    display: flex;
+    gap: 30px;
+    padding-top: 25px;
+    border-top: 1px solid var(--color-border);
+    width: 100%;
+}
+
+.highlight-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.highlight-number {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--color-coffee-medium);
+}
+
+.highlight-text {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}
+
+.hero-media {
+    flex: 1 1 480px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-hover);
+}
+
+
+/* ==========================================================================
+   4. About Section
+   - Layout: Flexbox side-by-side arrangement for story image and text
+   - Style: Warm cream card wrappers with clear feature bullet points
+   ========================================================================== */
+.about-section {
+    padding: 90px 0;
+    background-color: var(--color-bg-cream);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.about-image-wrapper {
+    flex: 1 1 480px;
+}
+
+.about-image {
+    width: 100%;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+}
+
+.about-text {
+    flex: 1 1 520px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.about-text h3 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--color-coffee-dark);
+}
+
+.about-text p {
+    color: var(--color-text-muted);
+}
+
+.about-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.about-features-list li {
+    position: relative;
+    padding-left: 28px;
+    color: var(--color-text-main);
+}
+
+.about-features-list li::before {
+    content: '☕';
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 1rem;
+}
+
+
+/* ==========================================================================
+   5. Featured Coffee Section
+   - Layout: Flexbox grid wrapper for coffee product cards
+   - Style: Card UI with badges, hover scale effects, and price tags
+   ========================================================================== */
+.featured-coffee-section {
+    padding: 90px 0;
+    background-color: var(--color-bg-cream-alt);
+}
+
+.featured-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.coffee-card {
+    background-color: var(--color-card-bg);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    flex: 1 1 260px;
+    max-width: 280px;
+    box-shadow: var(--shadow-soft);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+}
+
+.coffee-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card-image-wrapper {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    transition: transform var(--transition-normal);
+}
+
+.coffee-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.card-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--color-nav-brown);
+    color: var(--color-gold);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 12px;
+    letter-spacing: 1px;
+}
+
+.card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.card-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--color-coffee-dark);
+    margin-bottom: 6px;
+}
+
+.card-origin {
+    font-size: 0.85rem;
+    color: var(--color-caramel);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.card-notes {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    border-top: 1px solid var(--color-border);
+}
+
+.card-price {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-coffee-dark);
+}
+
+
+/* ==========================================================================
+   6. Menu Section
+   - Layout: Flexbox category pill bar & multi-column menu lists
+   - Style: Clean menu item price pairing with subtle dotted underline look
+   ========================================================================== */
+.menu-section {
+    padding: 90px 0;
+    background-color: var(--color-bg-cream);
+}
+
+.menu-categories {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.category-btn {
+    padding: 10px 24px;
+    border-radius: 25px;
+    background-color: var(--color-bg-cream-alt);
+    color: var(--color-text-main);
+    border: 1px solid var(--color-border);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.category-btn.active, .category-btn:hover {
+    background-color: var(--color-coffee-dark);
+    color: #FFFFFF;
+    border-color: var(--color-coffee-dark);
+}
+
+.menu-items-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.menu-category-group {
+    flex: 1 1 480px;
+    background-color: var(--color-card-bg);
+    padding: 30px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+}
+
+.category-heading {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    color: var(--color-coffee-dark);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-caramel);
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.menu-item-name {
+    color: var(--color-coffee-dark);
+}
+
+.menu-item-price {
+    color: var(--color-caramel);
+    font-weight: 700;
+}
+
+.menu-item-desc {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-top: 4px;
+}
+
+
+/* ==========================================================================
+   7. Gallery Section
+   - Layout: Flexbox wrapping gallery items with hover captions
+   - Style: Rounded images with smooth zoom effect on cursor hover
+   ========================================================================== */
+.gallery-section {
+    padding: 90px 0;
+    background-color: var(--color-bg-cream-alt);
+}
+
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    position: relative;
+    flex: 1 1 320px;
+    max-width: 360px;
+    height: 250px;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+
+.gallery-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    transition: transform var(--transition-normal);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(44, 24, 16, 0.9), transparent);
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 0.95rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all var(--transition-normal);
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.08);
+}
+
+.gallery-item:hover .gallery-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ==========================================================================
+   8. Reviews Section
+   - Layout: Flexbox cards for customer testimonials
+   - Style: Warm card containers with gold stars & author avatars
+   ========================================================================== */
+.reviews-section {
+    padding: 90px 0;
+    background-color: var(--color-bg-cream);
+}
+
+.reviews-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.review-card {
+    background-color: var(--color-card-bg);
+    border-radius: var(--radius-md);
+    padding: 30px;
+    flex: 1 1 320px;
+    max-width: 360px;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-rating {
+    color: #E6A15C;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    letter-spacing: 3px;
+}
+
+.review-quote {
+    font-style: italic;
+    color: var(--color-text-main);
+    font-size: 0.98rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-caramel);
+}
+
+.author-name {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--color-coffee-dark);
+}
+
+.author-title {
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+}
+
+
+/* ==========================================================================
+   9. Contact & Reservation Section
+   - Layout: Flexbox side-by-side splitting Info Cards & Interactive Form
+   - Style: Soft input fields with brown active state rings
+   ========================================================================== */
+.contact-section {
+    padding: 90px 0;
+    background-color: var(--color-bg-cream-alt);
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.contact-info {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-card {
+    background-color: var(--color-card-bg);
+    padding: 25px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.info-icon {
+    font-size: 2rem;
+    background-color: rgba(200, 125, 72, 0.12);
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.info-details h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-coffee-dark);
+    margin-bottom: 6px;
+}
+
+.info-details p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+}
+
+.contact-form-wrapper {
+    flex: 1 1 500px;
+    background-color: var(--color-card-bg);
+    padding: 40px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+}
+
+.contact-form h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--color-coffee-dark);
+    margin-bottom: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-coffee-dark);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 12px 16px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-bg-cream);
+    color: var(--color-text-main);
+    outline: none;
+    transition: border-color var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--color-caramel);
+    box-shadow: 0 0 0 3px rgba(200, 125, 72, 0.15);
+}
+
+.btn-block {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+}
+
+
+/* ==========================================================================
+   10. Footer Section
+   - Layout: Flexbox multi-column layout for links, hours, & newsletter form
+   - Style: Deep dark brown footer with warm caramel accent links
+   ========================================================================== */
+.site-footer {
+    background-color: var(--color-nav-brown);
+    color: #F3EAE1;
+    padding: 70px 0 30px 0;
+}
+
+.footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand {
+    flex: 1 1 280px;
+}
+
+.footer-description {
+    color: #CBB9AA;
+    margin: 15px 0 20px 0;
+    font-size: 0.95rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-link {
+    color: var(--color-gold);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.social-link:hover {
+    color: #FFFFFF;
+}
+
+.footer-links, .footer-hours, .footer-newsletter {
+    flex: 1 1 200px;
+}
+
+.footer-links h4, .footer-hours h4, .footer-newsletter h4 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-gold);
+    margin-bottom: 20px;
+}
+
+.footer-links ul, .footer-hours ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links a {
+    color: #CBB9AA;
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: var(--color-gold);
+}
+
+.footer-hours li {
+    display: flex;
+    justify-content: space-between;
+    color: #CBB9AA;
+    font-size: 0.9rem;
+}
+
+.footer-newsletter p {
+    color: #CBB9AA;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 8px;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    font-size: 0.85rem;
+    color: #A08D80;
+}
+
+.footer-legal {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-legal a {
+    color: #A08D80;
+}
+
+.footer-legal a:hover {
+    color: var(--color-gold);
+}
+
+
+/* ==========================================================================
+   11. Responsive Media Queries (Flexbox Adaptations)
+   - Mobile & Tablet adaptations ensuring seamless Flexbox stacking
+   ========================================================================== */
+
+/* Tablet (Max Width: 992px) */
+@media (max-width: 992px) {
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        align-items: center;
+        flex: 1 1 100%;
+    }
+
+    .hero-description {
+        margin: 0 auto 30px auto;
+    }
+
+    .hero-highlights {
+        justify-content: center;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+    }
+}
+
+/* Mobile (Max Width: 768px) */
+@media (max-width: 768px) {
+    .main-nav {
+        display: none; /* Can be toggled via JS mobile menu */
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .hero-title {
+        font-size: 2.3rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-highlights {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}

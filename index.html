@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Cozy Cup Cafe - Handcrafted artisanal coffee, fresh baked pastries, and a warm welcoming atmosphere. Visit us or order online today!">
+    <title>Cozy Cup Cafe | Artisanal Coffee & Comfort</title>
+    <!-- Google Fonts: Playfair Display for headings & Outfit for body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Header & Navigation Section -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="#hero" class="brand-logo">
+                <span class="logo-icon">☕</span>
+                <span class="logo-text">Cozy Cup Cafe</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="#featured-coffee" class="nav-link">Featured Coffee</a></li>
+                    <li class="nav-item"><a href="#menu" class="nav-link">Menu</a></li>
+                    <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li class="nav-item"><a href="#reviews" class="nav-link">Reviews</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#contact" class="btn btn-primary">Book a Table</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="hero-badge">Welcome to Your Daily Sanctuary</span>
+                    <h1 class="hero-title">Crafted with Passion, Served with Warmth</h1>
+                    <p class="hero-description">
+                        Step into Cozy Cup Cafe for hand-poured artisanal coffee, freshly baked morning pastries,
+                        and a peaceful ambiance crafted for relaxation and connection.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
+                        <a href="#about" class="btn btn-secondary">Our Story</a>
+                    </div>
+                    <div class="hero-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-number">100%</span>
+                            <span class="highlight-text">Organic Arabica Beans</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-number">Fresh</span>
+                            <span class="highlight-text">Daily House Baked Goods</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-number">Local</span>
+                            <span class="highlight-text">Ethically Sourced Dairy</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <img src="hero-coffee.jpg"
+                        alt="Barista skillfully pouring latte art into a ceramic cup at Cozy Cup Cafe"
+                        class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Since 2018</span>
+                    <h2 class="section-title">Our Story & Craft</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-image-wrapper">
+                        <img src="about-cafe.jpg"
+                            alt="Interior view of Cozy Cup Cafe featuring wooden tables and warm ambient lighting"
+                            class="about-image">
+                    </div>
+                    <div class="about-text">
+                        <h3>A Haven for Coffee Lovers & Dreamers</h3>
+                        <p>
+                            Founded with a dream to create a neighborhood retreat, Cozy Cup Cafe was built on a
+                            foundation
+                            of passion for exceptional coffee and heartfelt hospitality. We partner directly with
+                            sustainable
+                            farms across South America and East Africa to source premium, fair-trade single-origin
+                            beans.
+                        </p>
+                        <p>
+                            Every single batch is roasted in-house in small quantities to preserve the delicate balance
+                            of natural flavors—ranging from rich chocolatey undertones to vibrant citrus notes. Pair
+                            your brew
+                            with our scratch-made pastries baked fresh every morning by our resident bakers.
+                        </p>
+                        <ul class="about-features-list">
+                            <li><strong>Ethically Sourced:</strong> Direct trade agreements supporting coffee farming
+                                communities.</li>
+                            <li><strong>Precision Roasting:</strong> Small-batch roasts tailored for optimal flavor
+                                profile.</li>
+                            <li><strong>Warm Community Space:</strong> High-speed Wi-Fi, comfortable seating, and cozy
+                                nooks.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Coffee Section -->
+        <section id="featured-coffee" class="featured-coffee-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Handpicked Favorites</span>
+                    <h2 class="section-title">Featured Signature Roasts</h2>
+                    <p class="section-description">Taste our customer-favorite signature brews and seasonal roast
+                        highlights.</p>
+                </div>
+
+                <div class="featured-grid">
+                    <!-- Featured Coffee Item 1 -->
+                    <article class="coffee-card">
+                        <div class="card-image-wrapper">
+                            <span class="card-tag">Bestseller</span>
+                            <img src="velvet-espresso.jpg"
+                                alt="Rich Velvet Espresso served in a dark porcelain cup with golden crema"
+                                class="card-image">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Velvet Reserve Espresso</h3>
+                            <p class="card-origin">Origin: Colombia & Guatemala Blend</p>
+                            <p class="card-notes">Tasting Notes: Dark Chocolate, Roasted Hazelnut, Caramel Finish</p>
+                            <div class="card-footer">
+                                <span class="card-price">$4.50</span>
+                                <a href="#contact" class="btn btn-outline">Order Now</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Featured Coffee Item 2 -->
+                    <article class="coffee-card">
+                        <div class="card-image-wrapper">
+                            <span class="card-tag">Seasonal</span>
+                            <img src="honey-lavender-cold-brew.jpg"
+                                alt="Glass of Honey Lavender Cold Brew topped with smooth oat milk foam"
+                                class="card-image">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Honey Lavender Cold Brew</h3>
+                            <p class="card-origin">Origin: Ethiopian Yirgacheffe Single Origin</p>
+                            <p class="card-notes">Tasting Notes: Wild Honey, Dried Lavender, Soft Floral Foam</p>
+                            <div class="card-footer">
+                                <span class="card-price">$5.75</span>
+                                <a href="#contact" class="btn btn-outline">Order Now</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Featured Coffee Item 3 -->
+                    <article class="coffee-card">
+                        <div class="card-image-wrapper">
+                            <span class="card-tag">Signature</span>
+                            <img src="caramel-macchiato.jpg"
+                                alt="Layered Caramel Cinnamon Latte topped with whipped cream" class="card-image">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Cozy Caramel Cinnamon Latte</h3>
+                            <p class="card-origin">Origin: House Signature Espresso Roast</p>
+                            <p class="card-notes">Tasting Notes: Madagascar Vanilla, Brown Sugar, Ceylon Cinnamon</p>
+                            <div class="card-footer">
+                                <span class="card-price">$5.25</span>
+                                <a href="#contact" class="btn btn-outline">Order Now</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Featured Coffee Item 4 -->
+                    <article class="coffee-card">
+                        <div class="card-image-wrapper">
+                            <span class="card-tag">Specialty</span>
+                            <img src="pour-over.jpg"
+                                alt="Barista pouring hot water over fresh coffee grounds in a glass pour-over dripper"
+                                class="card-image">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Artisanal Pour-Over V60</h3>
+                            <p class="card-origin">Origin: Kenya Nyeri Hill (Single Origin)</p>
+                            <p class="card-notes">Tasting Notes: Blackcurrant, Jasmine, Bright Tangerine Acidity</p>
+                            <div class="card-footer">
+                                <span class="card-price">$6.00</span>
+                                <a href="#contact" class="btn btn-outline">Order Now</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="menu-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Delicious Selections</span>
+                    <h2 class="section-title">Our Full Menu</h2>
+                    <p class="section-description">Explore our handcrafted drinks, organic teas, and freshly baked
+                        delights.</p>
+                </div>
+
+                <!-- Category Filters -->
+                <div class="menu-categories" role="tablist">
+                    <button class="category-btn active" role="tab" aria-selected="true">Espresso & Hot Coffee</button>
+                    <button class="category-btn" role="tab" aria-selected="false">Cold Brews & Iced Drinks</button>
+                    <button class="category-btn" role="tab" aria-selected="false">Artisanal Teas</button>
+                    <button class="category-btn" role="tab" aria-selected="false">Bakery & Breakfast</button>
+                </div>
+
+                <div class="menu-items-grid">
+                    <!-- Menu Category 1: Espresso & Hot Coffee -->
+                    <div class="menu-category-group">
+                        <h3 class="category-heading">Espresso & Hot Coffee</h3>
+                        <dl class="menu-list">
+                            <div class="menu-item">
+                                <dt class="menu-item-header">
+                                    <span class="menu-item-name">Classic Double Espresso</span>
+                                    <span class="menu-item-price">$3.50</span>
+                                </dt>
+                                <dd class="menu-item-desc">Rich double shot of our house espresso blend with golden
+                                    crema.</dd>
+                            </div>
+                            <div class="menu-item">
+                                <dt class="menu-item-header">
+                                    <span class="menu-item-name">Traditional Cappuccino</span>
+                                    <span class="menu-item-price">$4.75</span>
+                                </dt>
+                                <dd class="menu-item-desc">Equal parts espresso, steamed milk, and dense micro-foam.
+                                </dd>
+                            </div>
+                            <div class="menu-item">
+                                <dt class="menu-item-header">
+                                    <span class="menu-item-name">Vanilla Bean Flat White</span>
+                                    <span class="menu-item-price">$5.00</span>
+                                </dt>
+                                <dd class="menu-item-desc">Smooth ristretto shots infused with real Madagascar vanilla
+                                    and velvet milk.</dd>
+                            </div>
+                            <div class="menu-item">
+                                <dt class="menu-item-header">
+                                    <span class="menu-item-name">Dark Chocolate Mocha</span>
+                                    <span class="menu-item-price">$5.50</span>
+                                </dt>
+                                <dd class="menu-item-desc">Espresso blended with 70% artisanal cocoa and steamed milk.
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+
+                    <!-- Menu Category 2: Bakery & Breakfast -->
+                    <div class="menu-category-group">
+                        <h3 class="category-heading">Bakery & Pastries</h3>
+                        <dl class="menu-list">
+                            <div class="menu-item">
+                                <dt class="menu-item-header">
+                                    <span class="menu-item-name">Butter Croissant</span>
+                                    <span class="menu-item-price">$4.00</span>
+                                </dt>
+                                <dd class="menu-item-desc">Flaky, golden French butter croissant baked fresh every
+                                    morning.</dd>
+                            </div>
+                            <div class="menu-item">
+                                <dt class="menu-item-header">
+                                    <span class="menu-item-name">Almond Cream Pastry</span>
+                                    <span class="menu-item-price">$4.75</span>
+                                </dt>
+                                <dd class="menu-item-desc">Twisted puff pastry filled with almond frangipane and toasted
+                                    almond flakes.</dd>
+                            </div>
+                            <div class="menu-item">
+                                <dt class="menu-item-header">
+                                    <span class="menu-item-name">Avocado Sourdough Toast</span>
+                                    <span class="menu-item-price">$8.50</span>
+                                </dt>
+                                <dd class="menu-item-desc">Crushed avocado, microgreens, chili flakes, and lemon drizzle
+                                    on house sourdough.</dd>
+                            </div>
+                            <div class="menu-item">
+                                <dt class="menu-item-header">
+                                    <span class="menu-item-name">Blueberry Lemon Scone</span>
+                                    <span class="menu-item-price">$4.25</span>
+                                </dt>
+                                <dd class="menu-item-desc">Tender scone loaded with wild blueberries and drizzled with
+                                    fresh lemon glaze.</dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="gallery-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Atmosphere & Moments</span>
+                    <h2 class="section-title">Life at Cozy Cup</h2>
+                    <p class="section-description">Take a look inside our cozy atmosphere, handcrafted drinks, and happy
+                        patrons.</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <figure class="gallery-item">
+                        <img src="gallery-1.jpg"
+                            alt="Cozy seating area with plush armchairs, wooden tables, and warm wall lamps"
+                            class="gallery-image">
+                        <figcaption class="gallery-caption">Our Warm & Cozy Seating Lounge</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="gallery-2.jpg"
+                            alt="Close-up of a barista carefully decorating a latte with fine milk foam art"
+                            class="gallery-image">
+                        <figcaption class="gallery-caption">Crafting Latte Art</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="gallery-3.jpg"
+                            alt="Display case filled with golden croissants, muffins, and fruit tarts"
+                            class="gallery-image">
+                        <figcaption class="gallery-caption">Fresh Pastries Baked Daily</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="gallery-4.jpg"
+                            alt="Customer enjoying a hot cup of coffee while reading a book by the window"
+                            class="gallery-image">
+                        <figcaption class="gallery-caption">Quiet Morning Reading Corner</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="gallery-5.jpg"
+                            alt="Freshly roasted coffee beans cooling in a stainless steel coffee roaster drum"
+                            class="gallery-image">
+                        <figcaption class="gallery-caption">In-House Micro Roasting</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="gallery-6.jpg"
+                            alt="Selection of iced coffee drinks arranged on a rustic wooden table outside"
+                            class="gallery-image">
+                        <figcaption class="gallery-caption">Outdoor Sunlit Patio</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="reviews-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Customer Testimonials</span>
+                    <h2 class="section-title">What Our Guests Say</h2>
+                    <p class="section-description">Read reviews from our beloved community and coffee enthusiasts.</p>
+                </div>
+
+                <div class="reviews-grid">
+                    <!-- Review 1 -->
+                    <article class="review-card">
+                        <div class="review-rating" aria-label="Rating: 5 out of 5 stars">
+                            ★★★★★
+                        </div>
+                        <blockquote class="review-quote">
+                            "Cozy Cup Cafe is my absolute favorite spot in the neighborhood! The Honey Lavender Cold
+                            Brew is life-changing,
+                            and the staff always welcomes you with a warm smile. Perfect place to work or catch up with
+                            friends."
+                        </blockquote>
+                        <div class="review-author">
+                            <img src="avatar-1.jpg" alt="Portrait of Sarah Jenkins" class="author-avatar">
+                            <div class="author-info">
+                                <h4 class="author-name">Sarah Jenkins</h4>
+                                <span class="author-title">Local Graphic Designer</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Review 2 -->
+                    <article class="review-card">
+                        <div class="review-rating" aria-label="Rating: 5 out of 5 stars">
+                            ★★★★★
+                        </div>
+                        <blockquote class="review-quote">
+                            "As a self-proclaimed coffee snob, I am thoroughly impressed by their single-origin
+                            pour-overs.
+                            The roasts are nuanced, never bitter, and their butter croissants taste straight out of a
+                            Parisian bakery!"
+                        </blockquote>
+                        <div class="review-author">
+                            <img src="avatar-2.jpg" alt="Portrait of Marcus Vance" class="author-avatar">
+                            <div class="author-info">
+                                <h4 class="author-name">Marcus Vance</h4>
+                                <span class="author-title">Coffee Enthusiast</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Review 3 -->
+                    <article class="review-card">
+                        <div class="review-rating" aria-label="Rating: 5 out of 5 stars">
+                            ★★★★★
+                        </div>
+                        <blockquote class="review-quote">
+                            "The ambiance here is unmatched. Soft jazz background music, comfortable seating, and the
+                            rich smell of
+                            freshly ground espresso beans. It truly lives up to its name—cozy in every sense!"
+                        </blockquote>
+                        <div class="review-author">
+                            <img src="avatar-3.jpg" alt="Portrait of Elena Rostova" class="author-avatar">
+                            <div class="author-info">
+                                <h4 class="author-name">Elena Rostova</h4>
+                                <span class="author-title">Regular Guest</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Get In Touch</span>
+                    <h2 class="section-title">Visit Us & Reservations</h2>
+                    <p class="section-description">Have a question, catering inquiry, or want to reserve a table? Reach
+                        out to us below.</p>
+                </div>
+
+                <div class="contact-wrapper">
+                    <!-- Contact Info Cards -->
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <div class="info-icon">📍</div>
+                            <div class="info-details">
+                                <h3>Our Location</h3>
+                                <p>124 Cozy Corner Lane, Suite 100<br>Seattle, WA 98101</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">⏰</div>
+                            <div class="info-details">
+                                <h3>Opening Hours</h3>
+                                <p>Monday – Friday: 6:30 AM – 7:00 PM<br>Saturday – Sunday: 7:30 AM – 8:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="info-card">
+                            <div class="info-icon">📞</div>
+                            <div class="info-details">
+                                <h3>Phone & Email</h3>
+                                <p>Phone: (555) 234-5678<br>Email: hello@cozycupcafe.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact / Reservation Form -->
+                    <div class="contact-form-wrapper">
+                        <form action="#" method="POST" class="contact-form">
+                            <h3>Send Us a Message</h3>
+
+                            <div class="form-group">
+                                <label for="full-name">Full Name *</label>
+                                <input type="text" id="full-name" name="full_name" placeholder="John Doe" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email-address">Email Address *</label>
+                                <input type="email" id="email-address" name="email" placeholder="john@example.com"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Inquiry Type *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="table-reservation">Table Reservation</option>
+                                    <option value="event-catering">Event & Catering</option>
+                                    <option value="general-feedback">General Inquiry / Feedback</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Your Message *</label>
+                                <textarea id="message" name="message" rows="5"
+                                    placeholder="Tell us how we can help you or detail your reservation..."
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#hero" class="brand-logo">
+                        <span class="logo-icon">☕</span>
+                        <span class="logo-text">Cozy Cup Cafe</span>
+                    </a>
+                    <p class="footer-description">
+                        Your cozy corner for artisanal roasts, fresh baked morning treats, and community warmth.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Follow us on Instagram">Instagram</a>
+                        <a href="#" class="social-link" aria-label="Follow us on Facebook">Facebook</a>
+                        <a href="#" class="social-link" aria-label="Follow us on Twitter">Twitter</a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#featured-coffee">Featured Coffee</a></li>
+                        <li><a href="#menu">Our Menu</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#reviews">Customer Reviews</a></li>
+                        <li><a href="#contact">Contact & Hours</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-hours">
+                    <h4>Working Hours</h4>
+                    <ul>
+                        <li><span>Mon - Fri:</span> <span>6:30 AM - 7:00 PM</span></li>
+                        <li><span>Saturday:</span> <span>7:30 AM - 8:00 PM</span></li>
+                        <li><span>Sunday:</span> <span>7:30 AM - 8:00 PM</span></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4>Join Our Club</h4>
+                    <p>Subscribe for exclusive roasts, secret menu updates, and 10% off your first visit!</p>
+                    <form action="#" method="POST" class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" aria-label="Email address for newsletter"
+                            required>
+                        <button type="submit" class="btn btn-primary">Join</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cozy Cup Cafe. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
