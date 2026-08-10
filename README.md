@@ -1,7 +1,7 @@
 # ☕ Cozy Cup Cafe
 
 ## Project Description
-Cozy Cup Cafe is a modern, artisanal, and responsive website designed for a warm and welcoming coffee shop located in **Puerto Princesa City, Palawan, Philippines**. Built using semantic HTML5 and vanilla CSS, the application features handcrafted typography (Playfair Display & Outfit), a rich espresso color palette, an interactive featured roasts gallery, Philippine Peso (₱) menu pricing, community testimonials, and an intuitive table reservation form.
+Cozy Cup Cafe is a modern, artisanal, and responsive website designed for a warm and welcoming coffee shop. Built using semantic HTML5 and vanilla CSS, the application features handcrafted typography (Playfair Display & Outfit), a rich espresso color palette, an interactive featured roasts gallery, community testimonials, and an intuitive table reservation form.
 
 ## Features
 - **Hero Sanctuary** — Welcoming entrance with quick navigation and ethical coffee highlights
@@ -17,15 +17,19 @@ Cozy Cup Cafe is a modern, artisanal, and responsive website designed for a warm
 
 ### 1. Hero Sanctuary & Brand Story
 ![Hero Sanctuary & Brand Story](images/readme-hero.png)
+Welcoming hero banner showcasing Cozy Cup Cafe's brand philosophy.
 
-### 2. Featured Signature Roasts & Menu Pricing (₱)
+### 2. Featured Signature Roasts & Menu Pricing
 ![Featured Signature Roasts](images/readme-featured.png)
+Handpicked coffee roast cards with origin details, flavor notes, and price tags.
 
 ### 3. Life at Cozy Cup (Atmosphere & Candid Gallery)
 ![Life at Cozy Cup Gallery](images/readme-gallery.png)
+Authentic photo gallery highlighting daily cafe life.
 
 ### 4. Customer Testimonials & Community Reviews
 ![Customer Testimonials](images/readme-reviews.png)
+Community reviews featuring feedback and profiles.
 
 ## About the Authors
 
